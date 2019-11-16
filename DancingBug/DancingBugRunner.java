@@ -25,17 +25,19 @@ import java.awt.Color;
  * This class runs a world that contains box bugs. <br />
  * This class is not tested on the AP CS A and AB exams.
  */
-public class ZBugRunner
+public class DancingBugRunner
 {
     public static void main(String[] args)
     {
+        int []arr = new int[9];
+        for(int i=0;i<9;++i){
+            arr[i] = i;
+        }
         ActorWorld world = new ActorWorld();
-        ZBug alice = new ZBug(4);// this parameter may be sidelength
+        DancingBug alice = new DancingBug(arr);
         alice.setColor(Color.ORANGE);
-        alice.setDirection(90);
-        //ZBug bob = new ZBug(3);
-        world.add(new Location(4, 4), alice);
-        //world.add(new Location(5, 5), bob);
+
+        world.add(new Location(5, 5), alice);
         world.show();
     }
 }
